@@ -1,0 +1,63 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<?php
+    $product_img_dir = 'add_product_img_dir';
+    $product_name = 'add_product_name';
+    $product_title = 'add_product_title';
+    $product_description = 'add_product_description';
+    $product_category = 'add_product_category';
+    $product_gender = 'add_product_gender';
+    $product_color = 'add_product_color';
+    $product_price = 'add_product_price';
+?>
+
+
+<?php
+    $title = "Opulente - Product";
+    $keywords = 'Opulente, Clothing , Clothing Store';
+    $describtion = 'Opulente is a clothing store';
+    require '../res/blocks/head.php';
+?>
+
+
+
+
+<link href="../res/css/header.css" rel="stylesheet" />
+<?php require '../res/blocks/header.php'; ?>
+
+<link href="../res/css/Product/product.css" rel="stylesheet" />
+<?php require '../res/blocks/Product/product.php'; ?>
+
+<link href="../res/css/footer.css" rel="stylesheet" />
+<?php require '../res/blocks/footer.php'; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src='<?=$domain?>js/global.js'></script>
+<script src='<?=$domain?>js/Product/script.js'></script>
+
+</body>
+</html>

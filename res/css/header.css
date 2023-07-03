@@ -1,0 +1,46 @@
+.header{
+
+}
+.hInner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 0;
+}
+.hiLogoLink{
+
+}
+.hiLogo{
+    max-width: 180px;
+}
+.hiLinks{
+    display: flex;
+    align-items: center;
+}
+.hilLink{
+    color: var(--black-text);
+    text-decoration: none;
+    margin-right: 16px;
+}
+.hilLink:last-child{
+    margin-right: 0;
+}
+.hilLinkIn{
+    text-decoration: underline;
+    color: var(--orange-main);
+}
+.hiUser{
+    display: flex;
+    align-items: center;
+}
+.hiuLink{
+    color: var(--black-text);
+    text-decoration: none;
+    margin-right: 16px;
+}
+.hiuLink:last-child{
+    margin-right: 0;
+}
+.hiuLink img{
+    width: 20px;
+}

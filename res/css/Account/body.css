@@ -1,0 +1,239 @@
+.body{
+
+}
+.bInner{
+    width: 100%;
+    max-width: 1600px;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: space-between;
+    /* background: red; */
+}
+.biLeft{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+.bilLink{
+    color: var(--black-text);
+    margin-bottom: 14px;
+    cursor: pointer;
+    transition: .2s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.bilLink:last-child{
+    margin-bottom: 0;
+}
+.bilLink:hover{
+    color: var(--orange-main);
+}
+.bilLinkBlockSelected{
+    color: var(--orange-main);
+}
+.biRight{
+    /* height: 100%; */
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    flex: 1;
+    padding-top: 60px;
+    /* overflow-y: scroll; */
+}
+.birSection{
+    width: 100%;
+    max-width: calc(100% - 100px);
+    margin: 0 auto;
+}
+.birSection0{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+.birs0Header{
+    text-align: center;
+    color: var(--black-text);
+    margin-bottom: 40px;
+}
+.birs0Form{
+    width: 100%;
+    max-width: 600px;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+}
+
+
+
+
+
+
+
+
+.bifiInput{
+    width: 100%;
+    /* max-width: 400px; */
+    height: 100px;
+    max-height: 40px;
+    border-bottom: 1px solid #000000;
+    padding-left: 10px;
+    color: #000000;
+    background: none;
+    outline: none;  
+}
+.bifiInput::placeholder {
+    color: #1b1b1b;
+    opacity: 1; /* Firefox */
+}
+.bifiSelect{
+    background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="24" height="24" fill="url(%23pattern0)"/><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="%23image0_425_188" transform="scale(0.0416667)"/></pattern><image id="image0_425_188" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nO2UQQqAMAwEN37Bfyq+xeqhPrYiRKiF1LbJMQs5NTubQgjgcllqBbABIAWDmLGUDzOAxHUOhhB7X87D/CgoQqiAB6lpz5ouAFMjPB8u1ny9IdQDl0KiYGrtGwohDfwPQhZwaTsOLu1KV3+SLCb/C4mW8PIMaM+Jy4U+3QvhPMbXkfjkAAAAAElFTkSuQmCC"/></defs></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: 50%;
+    appearance: none;
+    padding-bottom: 0;
+}
+.bifiSelect option{
+    background: #EBEFFF;
+    color: var(--black-text);
+}
+.bifiDouble{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 14px;
+}
+.bifiSubmit{
+    margin: 10px auto 0 auto;
+    background: #000000;
+    border-color: #ffffff00;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .2s;
+}
+.bifiSubmit:hover{
+    background: transparent;
+    border: 1px solid;
+    border-color: #000000;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+.birSection1{
+    display: flex;
+    flex-direction: column;
+}
+.birs1TableHolder{
+    overflow-y: scroll;
+}
+.birs1Table{
+    width: fit-content;
+    max-width: 100%;
+    border-spacing: 0px 5px;
+}
+.birs1Table tr{
+    /* background: #f0f0f0; */
+}
+.birs1Table th{
+    color: var(--black-text);
+    padding: 10px 36px 10px 0;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+.birs1Table td{
+    color: var(--black-text);
+    padding: 6px 36px 6px 0;
+    word-wrap: break-word;
+    max-width: 400px;
+}
+.birs1Table td input, .birs1Table td select{
+    width: fit-content;
+    color: var(--black-text);
+    border-bottom: 1px solid var(--black-text);
+    outline: none;
+}
+.birs1Table td select option{
+    color: var(--black-text);
+}
+.birs1Table tr:first-child{
+    background: none;
+}
+.birs1Save{
+    width: fit-content;
+    padding: 10px 25px;
+    color: var(--black-text);
+    border-radius: 6px;
+    margin-top: 10px;
+    transition: .2s;
+    cursor: pointer;
+    border: 2px solid #00000000;
+}
+.birs1Save:hover{
+    /* background: var(--orange-main);
+    color: #ffffff; */
+    border-color: var(--orange-main);
+    border-color: #000000;
+    /* color: var(--orange-main); */
+}
+
+
+
+/* width */
+.birs1TableHolder::-webkit-scrollbar {
+  width: 0px;
+  height: 6px;
+}
+
+/* Track */
+.birs1TableHolder::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.birs1TableHolder::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.birs1TableHolder::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.birSection2{
+    display: flex;
+    flex-direction: column;
+}
+.birSection3{
+    display: flex;
+    flex-direction: column;
+}
