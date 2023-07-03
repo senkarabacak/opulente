@@ -15,41 +15,41 @@ $orders = new orders($userDetails->username);
 <div class="body">
     <div class="bInner cont">
         <div class="biLeft">
-            <div class="bilLink bilLinkBlock text-big-size">My Account</div>
+            <div class="bilLink bilLinkBlock text-big-size">Meine Konto</div>
             <?php if($_SESSION['role'] == 'admin'): ?>
-                <div class="bilLink bilLinkBlock text-big-size">Accounts</div>
-                <div class="bilLink bilLinkBlock text-big-size">Products</div>
-                <div class="bilLink bilLinkBlock text-big-size">Add product</div>
+                <div class="bilLink bilLinkBlock text-big-size">Konten</div>
+                <div class="bilLink bilLinkBlock text-big-size">Produkte</div>
+                <div class="bilLink bilLinkBlock text-big-size">Produkt hinzufügen</div>
                 <?php endif; ?>
-            <div class="bilLink bilLinkBlock text-big-size">Orders</div>
-            <a href='logout' class="bilLink text-big-size">Log out</a>
+            <div class="bilLink bilLinkBlock text-big-size">Bestellungen</div>
+            <a href='logout' class="bilLink text-big-size">Abmelden</a>
         </div>
         <div class="biRight">
             <div class="birSection birSection0 reveal active fade-bottom" style='display: none'>
-                <div class="birs0Header header-size">My Account</div>
+                <div class="birs0Header header-size">Meine Konto</div>
                 <form action="config/dbaccess" method="POST" class="birs0Form" id='accForm'>
                     <select name="salutation" class="bifiSelect bifiInput" id='salutation'>
                         <option value="false" disabled="" selected="" hidden="" id="optionDesabled">Salutation</option>
-                        <option value="Sir" <?php if($userDetails->salutation == 'Sir'){echo "selected";} ?>>Sir</option>
-                        <option value="Madam" <?php if($userDetails->salutation == 'Madam'){echo "selected";} ?>>Madam</option>
+                        <option value="Herr" <?php if($userDetails->salutation == 'Herr'){echo "selected";} ?>>Herr</option>
+                        <option value="Frau" <?php if($userDetails->salutation == 'Frau'){echo "selected";} ?>>Frau</option>
                     </select>
                     <div class="bifiDouble">
-                        <input type="text" name='fName' class="bifiInput" placeholder='First Name' minlength="3" value="<?=$userDetails->first_name?>" required>
-                        <input type="text" name='lName' class="bifiInput" placeholder='Last Name' minlength="3" value="<?=$userDetails->last_name?>" required>
+                        <input type="text" name='fName' class="bifiInput" placeholder='Vorname' minlength="3" value="<?=$userDetails->first_name?>" required>
+                        <input type="text" name='lName' class="bifiInput" placeholder='Nachname' minlength="3" value="<?=$userDetails->last_name?>" required>
                     </div>
-                    <input type="text" name='address' class="bifiInput" placeholder='Address' minlength="3" value="<?=$userDetails->address?>" required>
+                    <input type="text" name='address' class="bifiInput" placeholder='Addresse' minlength="3" value="<?=$userDetails->address?>" required>
                     <div class="bifiDouble">
-                        <input type="text" name='zip' class="bifiInput" placeholder='Zip Code' minlength="2" value="<?=$userDetails->zip?>" required>
+                        <input type="text" name='zip' class="bifiInput" placeholder='PLZ' minlength="2" value="<?=$userDetails->zip?>" required>
                         <select name="country" class="bifiSelect bifiInput"  id='country' selected='AF'>
-                            <option value="false" disabled="" selected="" hidden="" id="optionDesabled">Country</option>
+                            <option value="false" disabled="" selected="" hidden="" id="optionDesabled">Land</option>
                             <?php include 'res/blocks/Register/countries_list.php'; ?>
                         </select>
                     </div>
                     <input type="email" name='email' class="bifiInput" placeholder='Email' value="<?=$userDetails->email?>" readonly>
-                    <input type="text" name='username' class="bifiInput" placeholder='Username' minlength="4" value="<?=$userDetails->username?>" readonly>
-                    <input type="password" name='passCur' class="bifiInput" placeholder='Current Password' id='passCur' minlength="4">
-                    <input type="password" name='pass' class="bifiInput" placeholder='New Password' id='pass' minlength="4">
-                    <input type="password" name='passRep' class="bifiInput" placeholder='Repeat Password' id='passRep' minlength="4">
+                    <input type="text" name='username' class="bifiInput" placeholder='Benutzername' minlength="4" value="<?=$userDetails->username?>" readonly>
+                    <input type="password" name='passCur' class="bifiInput" placeholder='Aktuelles Passwort' id='passCur' minlength="4">
+                    <input type="password" name='pass' class="bifiInput" placeholder='Neue Passwort' id='pass' minlength="4">
+                    <input type="password" name='passRep' class="bifiInput" placeholder='Passwort wiederholen' id='passRep' minlength="4">
                     <input type="text" style='display: none' name='formType' value='changeDetails'>
                     <input type="submit" class='bifiInput bifiSubmit' value='Change' id='submit'>
                 </form>
@@ -57,36 +57,40 @@ $orders = new orders($userDetails->username);
             <?php if($_SESSION['role'] == 'admin'): ?>
                 <div class="birSection birSection1 reveal active fade-bottom" style='display: none'>
                     <form action="config/dbaccess" method='POST'>
-                        <div class="birs0Header header-size">Accounts</div>
+                        <div class="birs0Header header-size">Konten</div>
                         <div class="birs1TableHolder">
 
                             <table class="birs1Table">
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Username</th>
-                                    <th>Email</th>
-                                    <th>Registration Date</th>
-                                    <th>Salutation</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Address</th>
-                                    <th>Zip</th>
-                                    <th>Country</th>
-                                    <th>Role</th>
-                                    <th>Active</th>
-                                </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>Benutzername</th>
+                                <th>E-Mail</th>
+                                <th>Registrierungsdatum</th>
+                                <th>Anrede</th>
+                                <th>Vorname</th>
+                                <th>Nachname</th>
+                                <th>Adresse</th>
+                                <th>Postleitzahl</th>
+                                <th>Land</th>
+                                <th>Rolle</th>
+                                <th>Aktiv</th>
+                            </tr>
+
+
+
+
                                 <?php
                                     for($i = 0; $i < count($allUserDetails->allUsers); $i++){
                                         $html = '';
-                                        if($allUserDetails->allUsers[$i][4] == 'Sir'){
+                                        if($allUserDetails->allUsers[$i][4] == 'Herr'){
                                             $salOptions = "
-                                                <option value='Sir' selected>Sir</option>
-                                                <option value='Madam'>Madam</option>
+                                                <option value='Herr' selected>Herr</option>
+                                                <option value='Frau'>Frau</option>
                                             ";
                                         }else{
                                             $salOptions = "
-                                                <option value='Sir'>Sir</option>
-                                                <option value='Madam' selected>Madam</option>
+                                                <option value='Herr'>Herr</option>
+                                                <option value='Frau' selected>Frau</option>
                                             ";
                                         }
 
@@ -165,16 +169,16 @@ $orders = new orders($userDetails->username);
                         <div class="birs1TableHolder">
                             <table class="birs1Table">
                                 <tr>
-                                    <th>Id</th>
-                                    <th>Product name</th>
-                                    <th>Title</th>
-                                    <th>Description</th>
-                                    <th>Category</th>
-                                    <th>Gender</th>
-                                    <th>Color</th>
-                                    <th>Price</th>
-                                    <th>Image file name</th>
-                                    <th>Delete</th>
+                                <th>ID</th>
+                                    <th>Produktname</th>
+                                    <th>Titel</th>
+                                    <th>Beschreibung</th>
+                                    <th>Kategorie</th>
+                                    <th>Geschlecht</th>
+                                    <th>Farbe</th>
+                                    <th>Preis</th>
+                                    <th>Bilddateiname</th>
+                                    <th>Löschen</th>
                                 </tr>
                                 <?php
                                     for($i = 0; $i < count($allProducts->allProducts); $i++){
@@ -256,20 +260,20 @@ $orders = new orders($userDetails->username);
 
                 <div class="birSection birSection3 reveal active fade-bottom" style='display: none'>
                     <form action="config/dbaccess" method='POST' enctype="multipart/form-data">
-                        <div class="birs0Header header-size">Add product</div>
+                        <div class="birs0Header header-size">Produkt hinzufügen</div>
                         <div class="birs1TableHolder">
                             <table class="birs1Table">
                                 <tr>
-                                    <th>Product name</th>
-                                    <th>Title</th>
-                                    <th>Description</th>
-                                    <th>Category</th>
-                                    <th>Gender</th>
-                                    <th>Color</th>
-                                    <th>Price</th>
-                                    <th>Image file</th>
-                                    <th>File name</th>
-                                </tr>
+                                <th>Produktname</th>
+                                <th>Titel</th>
+                                <th>Beschreibung</th>
+                                <th>Kategorie</th>
+                                <th>Geschlecht</th>
+                                <th>Farbe</th>
+                                <th>Preis</th>
+                                <th>Bilddatei</th>
+                                <th>Dateiname</th>
+                            </tr>
                                 <tr>
                                     <td><input type='text' name='v0' value=''></td>
                                     <td><input type='text' name='v1' value=''></td>
@@ -318,10 +322,10 @@ $orders = new orders($userDetails->username);
                     <div class="birs1TableHolder">
                         <table class="birs1Table">
                             <tr>
-                                <th>Title</th>
-                                <th>Category</th>
-                                <th>Gender</th>
-                                <th>Color</th>
+                                <th>Titel</th>
+                                <th>Kategorie</th>
+                                <th>Geschlecht</th>
+                                <th>Farbe</th>
                             </tr>
                             <?php
                                 for($i = 0; $i < count($orders->orders); $i++){

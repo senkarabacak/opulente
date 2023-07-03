@@ -35,7 +35,7 @@ function checkPassMaching(){
     form.onsubmit = function(){
         if(pass.value != '' && passRep.value != ''){
             if(pass.value != passRep.value){
-                alert("passwords didn't match")
+                alert("Passwörter stimmen nicht überein")
                 return
             }
         }

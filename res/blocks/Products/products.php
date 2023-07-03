@@ -11,7 +11,7 @@ $filters = new productFilters();
 
 <div class="products">
     <div class="pInner">
-        <div class="piHeader header-size w500">Products</div>
+        <div class="piHeader header-size w500">Produkte</div>
         <div class="piProducts">
             <div class="pipFilters">
                 <input type="text" class="pipfSearch f16 w500" id='pipfSearch'>
@@ -20,7 +20,7 @@ $filters = new productFilters();
 
                         <div class="pipfccItem">
                             <button aria-expanded="true">
-                                <span class="pipfcciTitle f20 w600">Filters</span>
+                                <span class="pipfcciTitle f20 w600">Filter</span>
                                 <div class="pipfcciImgHolder">
                                     <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 1L7 8L13 1" stroke="#34241E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -29,10 +29,10 @@ $filters = new productFilters();
                             </button>
                             <div class="pipfcciContent">
                                 <div class="pipfccicField">
-                                    <div class="pipfccicfHeader text-big-size w500">Type</div>
+                                    <div class="pipfccicfHeader text-big-size w500">Typ</div>
                                     <div class="pipfccicfFilter">
                                         <input type="checkbox" class="pipfccicffCheckbox">
-                                        <div class="pipfccicffcName f16 w500">All types</div>
+                                        <div class="pipfccicffcName f16 w500">Alle Typ</div>
                                     </div>
                                     <?php
                                         for($i = 0; $i < count($filters->category); $i++){
@@ -46,10 +46,10 @@ $filters = new productFilters();
                                     ?>
                                 </div>
                                 <div class="pipfccicField">
-                                    <div class="pipfccicfHeader text-big-size w500">Color</div>
+                                    <div class="pipfccicfHeader text-big-size w500">Farbe</div>
                                     <div class="pipfccicfFilter">
                                         <input type="checkbox" class="pipfccicffCheckbox">
-                                        <div class="pipfccicffcName f16 w500">All colors</div>
+                                        <div class="pipfccicffcName f16 w500">Alle Farbe</div>
                                     </div>
                                     <?php
                                         for($i = 0; $i < count($filters->color); $i++){
@@ -63,10 +63,10 @@ $filters = new productFilters();
                                     ?>
                                 </div>
                                 <div class="pipfccicField">
-                                    <div class="pipfccicfHeader text-big-size w500">Gender</div>
+                                    <div class="pipfccicfHeader text-big-size w500">Geschlecht</div>
                                     <div class="pipfccicfFilter">
                                         <input type="checkbox" class="pipfccicffCheckbox">
-                                        <div class="pipfccicffcName f16 w500">All genders</div>
+                                        <div class="pipfccicffcName f16 w500">Alle Geschlechte</div>
                                     </div>
                                     <?php
                                         for($i = 0; $i < count($filters->gender); $i++){

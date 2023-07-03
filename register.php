@@ -10,10 +10,10 @@ session_start();
 
 
 <?php
-    $title = "Opulente - Clothing store";
-    $keywords = 'Opulente, Clothing , Clothing Store';
-    $describtion = 'Opulente is a clothing store';
-    require 'res/blocks/head.php';
+  $title = "Opulente - Produkt";
+  $keywords = 'Opulente, Kleidung, Mode Geschäft';
+  $describtion = 'Opulente ist Mode Geschäft';
+  require 'res/blocks/head.php';
 ?>
 
 

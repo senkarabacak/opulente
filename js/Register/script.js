@@ -22,16 +22,16 @@ function checkValidity(){
 
     form.onsubmit = function(){
         if(salutationInput.value == 'false'){
-            alert('Please select salutation')
+            alert('Bitte wählen Sie eine Anrede')
             return false
         }
         if(countryInput.value == 'false'){
-            alert('Please select your country')
+            alert('Bitte wählen Sie Ihr Land')
             return false
         }
 
         if(pass.value != passRep.value){
-            alert("Passwords didn't match")
+            alert("Passwörter stimmen nicht überein")
             return false
         }
     }

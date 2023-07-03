@@ -73,11 +73,11 @@ function addProducts(){
             filterCheckboxes(res[0])
             filterSearch()
         }else{
-            console.log('something went wrong')
+            console.log('Etwas ist schiefgelaufen')
             console.log(res)
         }
     }).catch(err => {
-        console.log('something went wrong')
+        console.log('Etwas ist schiefgelaufen')
         console.log(err)
     })
 }

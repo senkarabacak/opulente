@@ -14,14 +14,14 @@ session_start();
     $product_category = 'loungewear';
     $product_gender = 'female';
     $product_color = 'brown';
-    $product_price = '$100';
+    $product_price = '€100';
 ?>
 
 
 <?php
-    $title = "Opulente - Product";
-    $keywords = 'Opulente, Clothing , Clothing Store';
-    $describtion = 'Opulente is a clothing store';
+    $title = "Opulente - Produkt";
+    $keywords = 'Opulente, Kleidung, Mode Geschäft';
+    $describtion = 'Opulente ist Mode Geschäft';
     require '../res/blocks/head.php';
 ?>
 

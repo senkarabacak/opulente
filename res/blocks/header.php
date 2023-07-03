@@ -3,7 +3,7 @@
         <a href="/" class="hiLogoLink"> <img src="<?=$domain?>res/img/logo.png" alt="" class="hiLogo"> </a>
         <div class="hiLinks">
             <a href="<?=$domain?>" class="hilLink">Home</a>
-            <a href="<?=$domain . 'products'?>" class="hilLink">Products</a>
+            <a href="<?=$domain . 'products'?>" class="hilLink">Produkte</a>
         </div>
         <div class="hiUser">
             <?php if(isset($_SESSION['user']) || isset($_COOKIE['user'])): ?>
@@ -14,8 +14,8 @@
 
             <?php else: ?>
 
-            <a href="signup" class="hiuLink">Login</a>
-            <a href="register" class="hiuLink">Register</a>
+            <a href="signup" class="hiuLink">Einloggen</a>
+            <a href="register" class="hiuLink">Registrieren</a>
             <!-- <a href="cart" class="hiuLink"> <img src="<?=$domain?>res/img/cart.png" alt=""> </a> -->
 
             <?php endif; ?>
